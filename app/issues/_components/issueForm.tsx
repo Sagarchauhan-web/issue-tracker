@@ -41,6 +41,7 @@ const IssueForm = ({ issue }: Props) => {
       else await axios.post('/api/issues', data);
 
       router.replace('/issues');
+      router.refresh();
     } catch (error) {
       setIsSubmitting(false);
 
