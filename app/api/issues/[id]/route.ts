@@ -27,7 +27,7 @@ export async function PATCH(
   return NextResponse.json(updatedIssue);
 }
 
-export async function DELTE(
+export async function DELETE(
   request: NextRequest,
   { params }: { params: { id: string } },
 ) {
@@ -42,5 +42,5 @@ export async function DELTE(
     where: { id: issue.id },
   });
 
-  NextResponse.json({});
+  return NextResponse.json({});
 }
